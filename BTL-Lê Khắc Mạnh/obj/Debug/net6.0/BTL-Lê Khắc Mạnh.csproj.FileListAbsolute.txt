@@ -1,0 +1,32 @@
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\appsettings.Development.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\appsettings.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\BTL-Lê Khắc Mạnh.exe
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\BTL-Lê Khắc Mạnh.deps.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\BTL-Lê Khắc Mạnh.runtimeconfig.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\BTL-Lê Khắc Mạnh.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\BTL-Lê Khắc Mạnh.pdb
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.csproj.AssemblyReference.cache
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.GeneratedMSBuildEditorConfig.editorconfig
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.AssemblyInfoInputs.cache
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.AssemblyInfo.cs
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.csproj.CoreCompileInputs.cache
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.MvcApplicationPartsAssemblyInfo.cs
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.MvcApplicationPartsAssemblyInfo.cache
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets\msbuild.BTL-Lê Khắc Mạnh.Microsoft.AspNetCore.StaticWebAssets.props
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets\msbuild.build.BTL-Lê Khắc Mạnh.props
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.BTL-Lê Khắc Mạnh.props
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.BTL-Lê Khắc Mạnh.props
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets.pack.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets.build.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\staticwebassets.development.json
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\scopedcss\bundle\BTL-Lê Khắc Mạnh.styles.css
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.csproj.CopyComplete
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\refint\BTL-Lê Khắc Mạnh.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.pdb
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL-Lê Khắc Mạnh.genruntimeconfig.cache
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\ref\BTL-Lê Khắc Mạnh.dll

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\BTL-Lê Khắc Mạnh.props" />
+</Project>
