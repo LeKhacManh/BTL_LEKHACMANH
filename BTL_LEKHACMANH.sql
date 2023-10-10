@@ -159,6 +159,14 @@ BEGIN
     VALUES(  @MaKhachHang,@TenKhachHang,@GioiTinh,@DiaChi,@SoDienThoai)
 END
 GO
+
+create proc Proc_getkh 
+@MaKhachHang nvarchar(10)
+as
+BEGIN
+    select* FROM tbl_KhachHang WHERE MaKhachHang =@MaKhachHang
+END
+GO
 -----gọi thủ tục
 exec Proc_themkh'KH012',N'Le Thi Thuy Duong','Nu',N'Ha noi','0987654321';
 SELECT * FROM tbl_KhachHang
