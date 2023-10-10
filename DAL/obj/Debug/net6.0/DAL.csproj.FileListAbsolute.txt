@@ -1,0 +1,17 @@
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DAL.dll
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DAL.pdb
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DTO.dll
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\bin\Debug\net6.0\DTO.pdb
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.dll
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.pdb
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\BTL\BTL-Lê Khắc Mạnh\DAL\obj\Debug\net6.0\ref\DAL.dll
