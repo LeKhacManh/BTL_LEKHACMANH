@@ -1,4 +1,5 @@
 using BLL;
+using BLL.Interfaces;
 using DAL;
 using DTO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,8 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddTransient<IDatabaseHelper, DatabaseHelper>();
 builder.Services.AddTransient<IKhachRepository, KhachRepository>();
 builder.Services.AddTransient<IKhachHangBLL, KhachHangBLL>();
-//builder.Services.AddTransient<IUserRepository, UserRepository>();
-//builder.Services.AddTransient<IUserBusiness, UserBusiness>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserBLL, UserBLL>();
 builder.Services.AddControllers();
 
 

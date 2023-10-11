@@ -1,14 +1,14 @@
-﻿//using DTO;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using DTO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace DAL
-//{
-//    public partial interface IUserRepository
-//    {
-//        UserDTO Login(string taikhoan, string matkhau); 
-//    }
-//}
+namespace DAL
+{
+    public partial interface IUserRepository
+    {
+        UserDTO Login(string taikhoan, string matkhau);
+    }
+}

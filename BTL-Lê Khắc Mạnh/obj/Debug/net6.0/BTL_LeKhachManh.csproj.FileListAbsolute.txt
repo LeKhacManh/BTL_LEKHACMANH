@@ -80,3 +80,12 @@ D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\refint\BTL_L
 D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL_LeKhachManh.pdb
 D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\BTL_LeKhachManh.genruntimeconfig.cache
 D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\obj\Debug\net6.0\ref\BTL_LeKhachManh.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\BTL\BTL-Lê Khắc Mạnh\BTL-Lê Khắc Mạnh\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

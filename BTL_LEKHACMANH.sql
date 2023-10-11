@@ -66,6 +66,25 @@ CREATE TABLE tbl_ChiTietHoaDonBan (
 );
 GO
 
+/****** Object:  Table [dbo].[TaiKhoans]    Script Date: 8/28/2023 4:03:13 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TaiKhoans](
+	[MaTaiKhoan] [int] IDENTITY(1,1) NOT NULL,
+	[LoaiTaiKhoan] [int] NULL,
+	[TenTaiKhoan] [nvarchar](50) NULL,
+	[MatKhau] [nvarchar](50) NULL,
+	[Email] [nvarchar](150) NULL,
+ CONSTRAINT [PK_Accounts] PRIMARY KEY CLUSTERED 
+(
+	[MaTaiKhoan] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
 -- Thêm nhân viên 
 INSERT INTO tbl_NhanVien (MaNhanVien, TenNhanVien, GioiTinh, DiaChi, SoDienThoai, Email, NgaySinh)VALUES 
 ('NV001', 'Nguyen Van An', 'Nam', '123 Nguyen Du, Hanoi', '0123456789', 'nv.a@example.com', '2000-01-01'),
@@ -210,3 +229,30 @@ END
 GO
 ----gọi thủ tục tìm kiếm có họ “Nguyen”
 exec Proc_tkkh 'Nguyen'
+
+/****** Object:  StoredProcedure [dbo].[sp_login]    Script Date: 9/29/2023 2:30:25 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create PROCEDURE [dbo].[sp_login](@taikhoan nvarchar(50), @matkhau nvarchar(50))
+AS
+    BEGIN
+      SELECT  *
+      FROM TaiKhoans
+      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+    END;
+USE [BTL_LEKHACMANH]
+GO
+/****** Object:  StoredProcedure [dbo].[sp_login]    Script Date: 9/29/2023 2:30:25 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create PROCEDURE [dbo].[sp_login](@taikhoan nvarchar(50), @matkhau nvarchar(50))
+AS
+    BEGIN
+      SELECT  *
+      FROM TaiKhoans
+      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+    END;
