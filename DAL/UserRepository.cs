@@ -17,10 +17,10 @@ namespace DAL
             _dbHelper = dbHelper;
         }
 
-        public static object CreateUser(global::BLL.UserBLL model)
-        {
-            throw new NotImplementedException();
-        }
+        //public static object CreateUser(global::BLL.UserBLL model)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public UserDTO Login(string taikhoan, string matkhau)
         {

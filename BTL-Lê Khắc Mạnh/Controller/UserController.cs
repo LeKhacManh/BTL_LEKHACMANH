@@ -3,7 +3,7 @@ using BLL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BLL.Interfaces;
+using BLL. Interfaces;
 using DAL;
 
 namespace BTL_LeKhacManh.Controllers
@@ -35,15 +35,5 @@ namespace BTL_LeKhacManh.Controllers
         public string Password { get; internal set; }
     }
    
-    //[HttpPost("create")]
-    //public IActionResult CreateUser([FromBody] UserBLL model)
-    //{
-    //    var newUser = UserRepository.CreateUser(model);
-    //    if (newUser == null)
-    //        return BadRequest(new { message = "Failed to create user" });
-
-    //    return Created("", newUser);
-    //}
-
 
 }
