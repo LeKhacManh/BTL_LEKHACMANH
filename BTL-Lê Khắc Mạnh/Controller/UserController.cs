@@ -19,7 +19,7 @@ namespace BTL_LeKhacManh.Controllers
         }
         [AllowAnonymous]
         [HttpPost("login")]
-        public IActionResult Login([FromBody] AuthenticateModel model)
+        public IActionResult Login([FromBody] AuthenticateDTO model)
         {
             var user = _userBusiness.Login(model.Username, model.Password);
             if (user == null)
@@ -27,13 +27,4 @@ namespace BTL_LeKhacManh.Controllers
             return Ok(new { taikhoan = user.TenTaiKhoan, email = user.Email, token = user.token });
         }
     }
-
-    public class AuthenticateModel
-    {
-        internal string Username;
-
-        public string Password { get; internal set; }
-    }
-   
-
 }

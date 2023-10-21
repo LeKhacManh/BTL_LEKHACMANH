@@ -16,18 +16,12 @@ namespace DAL
         {
             _dbHelper = dbHelper;
         }
-
-        //public static object CreateUser(global::BLL.UserBLL model)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public UserDTO Login(string taikhoan, string matkhau)
         {
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "Proc_login",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_login",
                      "@taikhoan", taikhoan,
                      "@matkhau", matkhau
                      );

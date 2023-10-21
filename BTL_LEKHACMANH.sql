@@ -32,6 +32,39 @@ CREATE TABLE tbl_NhanVien (
     NgaySinh DATE not null,
 );
 GO
+CREATE TABLE LoaiTaiKhoan (
+    LoaiTaiKhoanID int PRIMARY KEY,
+    TenLoaiTaiKhoan nvarchar(50)
+);
+
+-- Tạo bảng tbl_TaiKhoan với khóa ngoại trỏ đến LoaiTaiKhoan
+CREATE TABLE tbl_TaiKhoan (
+    MaTaiKhoan int PRIMARY KEY,
+    LoaiTaiKhoanID int, -- Khóa ngoại trỏ đến LoaiTaiKhoan
+    TenTaiKhoan nvarchar(50),
+    Matkhau nvarchar(50),
+    Email nvarchar(50),  
+    FOREIGN KEY (LoaiTaiKhoanID) REFERENCES LoaiTaiKhoan (LoaiTaiKhoanID)
+);
+
+-- Tạo bảng ChiTietTaiKhoan để lưu thông tin chi tiết về tài khoản
+CREATE TABLE ChiTietTaiKhoan (
+    MaChiTietTaiKhoan int PRIMARY KEY,
+    MaTaiKhoan int, -- Khóa ngoại trỏ đến MaTaiKhoan trong tbl_TaiKhoan
+    HoTen nvarchar(100),
+    DiaChi nvarchar(200),
+    SoDienThoai nvarchar(20),
+    
+    FOREIGN KEY (MaTaiKhoan) REFERENCES tbl_TaiKhoan (MaTaiKhoan)
+);
+INSERT INTO tbl_TaiKhoan VALUES
+('1','1','admin','admin','manh1003@gmail.com'),
+('2','1','user','user','manh10032003@gmail.com')
+
+INSERT INTO LoaiTaiKhoan (LoaiTaiKhoanID, TenLoaiTaiKhoan)
+VALUES (1, N'Admin'),
+       (2, N'Người dùng');
+
 -- tạo bảng khách hàng 
 CREATE TABLE tbl_KhachHang (
     MaKhachHang char(10) CONSTRAINT PK_MKH PRIMARY KEY (MaKhachHang) not null,
@@ -242,17 +275,68 @@ AS
       FROM TaiKhoans
       where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
     END;
-USE [BTL_LEKHACMANH]
+CREATE PROCEDURE Proc_login(@taikhoan nvarchar(50), @matkhau nvarchar(50))
+AS
+    BEGIN
+      SELECT  *
+      FROM tbl_TaiKhoan
+      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+    END;
+
+	exec Proc_login 'admin','admin';
+	exec Proc_login 'user','user'
 GO
-/****** Object:  StoredProcedure [dbo].[sp_login]    Script Date: 9/29/2023 2:30:25 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_hoadon_create]    Script Date: 9/22/2023 4:00:06 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-Create PROCEDURE [dbo].[sp_login](@taikhoan nvarchar(50), @matkhau nvarchar(50))
+Create PROCEDURE [dbo].[sp_hoadon_create]
+(@TenKH              NVARCHAR(50), 
+ @Diachi          NVARCHAR(250), 
+ @TrangThai         bit,  
+ @list_json_chitiethoadon NVARCHAR(MAX)
+)
 AS
     BEGIN
-      SELECT  *
-      FROM TaiKhoans
-      where TenTaiKhoan= @taikhoan and MatKhau = @matkhau;
+		DECLARE @MaHoaDon INT;
+        INSERT INTO HoaDons
+                (TenKH, 
+                 Diachi, 
+                 TrangThai               
+                )
+                VALUES
+                (@TenKH, 
+                 @Diachi, 
+                 @TrangThai
+                );
+
+				SET @MaHoaDon = (SELECT SCOPE_IDENTITY());
+                IF(@list_json_chitiethoadon IS NOT NULL)
+                    BEGIN
+                        INSERT INTO ChiTietHoaDons
+						 (MaSanPham, 
+						  MaHoaDon,
+                          SoLuong, 
+                          TongGia               
+                        )
+                    SELECT JSON_VALUE(p.value, '$.maSanPham'), 
+                            @MaHoaDon, 
+                            JSON_VALUE(p.value, '$.soLuong'), 
+                            JSON_VALUE(p.value, '$.tongGia')    
+                    FROM OPENJSON(@list_json_chitiethoadon) AS p;
+                END;
+        SELECT '';
+    END;
+Create PROCEDURE [dbo].[sp_hoadon_get_by_id](@MaHoaDon        int)
+AS
+    BEGIN
+        SELECT h.*, 
+        (
+            SELECT c.*
+            FROM ChiTietHoaDons AS c
+            WHERE h.MaHoaDon = c.MaHoaDon FOR JSON PATH
+        ) AS list_json_chitiethoadon
+        FROM HoaDons AS h
+        WHERE  h.MaHoaDon = @MaHoaDon;
     END;
