@@ -21,7 +21,7 @@ namespace DAL
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_login",
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "Proc_login",
                      "@taikhoan", taikhoan,
                      "@matkhau", matkhau
                      );

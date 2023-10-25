@@ -12,16 +12,16 @@ namespace BTL_LeKhacManh.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserRepository _userBusiness;
-        public UserController(IUserRepository userBusiness)
+        private IUserBLL _userBll;
+        public UserController(IUserBLL userBusiness)
         {
-            _userBusiness = userBusiness;
+            _userBll = userBusiness;
         }
         [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login([FromBody] AuthenticateDTO model)
         {
-            var user = _userBusiness.Login(model.Username, model.Password);
+            var user = _userBll.Login(model.Username, model.Password);
             if (user == null)
                 return BadRequest(new { message = "Tài khoản hoặc mật khẩu không đúng!" });
             return Ok(new { taikhoan = user.TenTaiKhoan, email = user.Email, token = user.token });

@@ -1,6 +1,7 @@
 using BLL;
 using BLL.Interfaces;
 using DAL;
+using DAL.Interfaces;
 using DTO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -18,6 +19,8 @@ builder.Services.AddTransient<IHoaDonRepository, HoaDonRepository>();
 builder.Services.AddTransient<IHoaDonBLL, HoaDonBLL>();
 builder.Services.AddTransient<IUserRepository, UserRepository>();
 builder.Services.AddTransient<IUserBLL, UserBLL>();
+builder.Services.AddTransient<IHangHoaRepository, HangHoaRepository>();
+builder.Services.AddTransient<IHangHoaBLL, HangHoaBLL>();
 
 
 // configure strongly typed settings objects

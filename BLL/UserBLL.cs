@@ -10,13 +10,12 @@ using DAL;
 using DTO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
 namespace BLL
 {
     public class UserBLL : IUserBLL
     {
-        public IUserRepository _res;
-        public string secret;
+        private IUserRepository _res;
+        private string secret;
         public UserBLL(IUserRepository res, IConfiguration configuration)
         {
             _res = res;

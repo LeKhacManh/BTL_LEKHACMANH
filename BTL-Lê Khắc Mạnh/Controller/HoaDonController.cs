@@ -33,7 +33,13 @@ namespace BTL_Lê_Khắc_Mạnh.Controller
             _hoadonBusiness.Update(model);
             return model;
         }
-
+        [Route("delete-hoadon")]
+        [HttpDelete]
+        public IActionResult DeleteItem(string MaHoaDon)
+        {
+            _hoadonBusiness.Delete(MaHoaDon);
+            return Ok(MaHoaDon);
+        }
         [Route("search")]
         [HttpPost]
         public IActionResult Search([FromBody] Dictionary<string, object> formData)
