@@ -21,6 +21,14 @@ namespace BLL
         {
             return _res.GetDataById(id);
         }
+        public HangHoaDTO GetTHH(string ten)
+        {
+            return _res.GetTHH(ten);
+        }
+        public List<HangHoaDTO> GetallHH()
+        {
+            return _res.GetallHH();
+        }
         public bool Create(HangHoaDTO model)
         {
             return _res.Create(model);

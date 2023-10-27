@@ -20,8 +20,8 @@ namespace DAL
             string msgError = "";
             try
             {
-                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimSanPhamTheoTen",
-                     "@TenSanPham", id);
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TKHH",
+                     "@MaHang", id);
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
                 return dt.ConvertTo<HangHoaDTO>().FirstOrDefault();
@@ -31,18 +31,48 @@ namespace DAL
                 throw ex;
             }
         }
-
+        public HangHoaDTO GetTHH(string ten)
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "TimMatHangTheoTenHang",
+                     "@Tenhang", ten);
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<HangHoaDTO>().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<HangHoaDTO>  GetallHH()
+        {
+            string msgError = "";
+            try
+            {
+                var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "HangHoa_getAll");
+                if (!string.IsNullOrEmpty(msgError))
+                    throw new Exception(msgError);
+                return dt.ConvertTo<HangHoaDTO>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public bool Create(HangHoaDTO model)
         {
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "ThemSanPham",
-                "@MaSanPham", model.MaSanPham,
-                "@MaLoai", model.MaLoai,
-                "@TenSanPham", model.TenSanPham,
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Proc_ThemHangHoa",
+                "@MaHang", model.MaHang,
+                "@MaLoaiHang", model.MaLoaiHang,
+                "@TenHang", model.TenHang,
                 "@SoLuong", model.SoLuong,
-                "@Gia", model.Gia);
+                "@DonGiaNhap", model.DonGiaNhap);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -60,12 +90,12 @@ namespace DAL
             string msgError = "";
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "SuaSanPham",
-                "@MaSanPham", model.MaSanPham,
-                "@MaLoai", model.MaLoai,
-                "@TenSanPham", model.TenSanPham,
+                var result = _dbHelper.ExecuteScalarSProcedureWithTransaction(out msgError, "Proc_SuaHangHoa",
+                 "@MaHang", model.MaHang,
+                "@MaLoaiHang", model.MaLoaiHang,
+                "@TenHang", model.TenHang,
                 "@SoLuong", model.SoLuong,
-                "@Gia", model.Gia);
+                "@DonGiaNhap", model.DonGiaNhap);
                 if ((result != null && !string.IsNullOrEmpty(result.ToString())) || !string.IsNullOrEmpty(msgError))
                 {
                     throw new Exception(Convert.ToString(result) + msgError);
@@ -84,7 +114,7 @@ namespace DAL
             bool kq; // Khởi tạo mặc định là false
             try
             {
-                var result = _dbHelper.ExecuteScalarSProcedure(out msgError, "XoaSanPham",
+                var result = _dbHelper.ExecuteScalarSProcedure(out msgError, "Proc_XoaHangHoa",
                      "@MaSanPham", id);
                 // Kiểm tra kết quả trả về từ hàm ExecuteScalarSProcedureWithTransaction
                 if (Convert.ToInt32(result) > 0)
@@ -103,7 +133,7 @@ namespace DAL
             }
         }
 
-        public List<ThongKeKhachModel> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
+        public List<ThongKeKhachDTO> Search(int pageIndex, int pageSize, out long total, string ten_khach, DateTime? fr_NgayTao, DateTime? to_NgayTao)
         {
             throw new NotImplementedException();
         }

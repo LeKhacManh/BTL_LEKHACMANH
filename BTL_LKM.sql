@@ -424,4 +424,134 @@ END
 
 exec XoaHoaDonBan'5'
 
+--hang hoa---
 
+--CREATE PROCEDURE Proc_ThemHangHoa
+--(
+--    @MaHang CHAR(10),
+--    @TenHang NVARCHAR(50),
+--    @MaLoaiHang CHAR(10),
+--    @SoLuong INT,
+--    @DonGiaNhap FLOAT,
+--    @DonGiaBan FLOAT,
+--    @MoTa VARCHAR(100)
+--)
+--AS
+--BEGIN
+--    INSERT INTO tbl_HangHoa (MaHang, TenHang, MaLoaiHang, SoLuong, DonGiaNhap, DonGiaBan, MoTa)
+--    VALUES (@MaHang, @TenHang, @MaLoaiHang, @SoLuong, @DonGiaNhap, @DonGiaBan, @MoTa);
+--END
+
+--CREATE PROCEDURE Proc_SuaHangHoa
+--(
+--    @MaHang CHAR(10),
+--    @TenHang NVARCHAR(50),
+--    @MaLoaiHang CHAR(10),
+--    @SoLuong INT,
+--    @DonGiaNhap FLOAT,
+--    @DonGiaBan FLOAT,
+--    @MoTa VARCHAR(100)
+--)
+--AS
+--BEGIN
+--    UPDATE tbl_HangHoa
+--    SET TenHang = @TenHang, MaLoaiHang = @MaLoaiHang, SoLuong = @SoLuong, DonGiaNhap = @DonGiaNhap, DonGiaBan = @DonGiaBan, MoTa = @MoTa
+--    WHERE MaHang = @MaHang;
+--END
+--CREATE PROCEDURE Proc_XoaHangHoa
+--(
+--    @MaHang CHAR(10)
+--)
+--AS
+--BEGIN
+--    DELETE FROM tbl_HangHoa
+--    WHERE MaHang = @MaHang;
+--END
+---- Create a stored procedure for searching HangHoa
+--CREATE PROCEDURE Proc_TimKiemHangHoa
+--(
+--    @TUKHOA NVARCHAR(50)
+--)
+--AS
+--BEGIN
+--    SELECT *
+--    FROM tbl_HangHoa
+--    WHERE TenHang = @TUKHOA OR TenHang LIKE @TUKHOA OR MoTa LIKE @TUKHOA OR TenHang LIKE '%' + @TUKHOA + '%';
+--END
+--EXEC Proc_ThemHangHoa 'HH011', 'New Product', 'LH001', 50, 100.00, 150.00, 'Description';
+
+---- Update an existing HangHoa
+--EXEC Proc_SuaHangHoa 'HH011', 'Updated Product', 'LH002', 60, 120.00, 170.00, 'Updated Description';
+
+---- Delete a HangHoa
+--EXEC Proc_XoaHangHoa 'HH011';
+--EXEC Proc_TimKiemHangHoa 'iPhone';
+CREATE PROCEDURE TKHH
+    @TenSanPham nvarchar(250)
+AS
+BEGIN
+    SELECT *
+    FROM tbl_HangHoa
+    WHERE TenHang = @TenSanPham;
+END;
+
+
+
+--Thêm
+CREATE PROCEDURE ThemSanPham
+    @MaHang CHAR(10),
+    @MaLoaiHang CHAR(10),
+    @TenHang NVARCHAR(250),
+    @SoLuong INT,
+    @DonGiaNhap INT,
+	@DonGiaBan INT
+
+AS
+BEGIN
+    INSERT INTO tbl_HangHoa( MaLoaiHang, TenHang, SoLuong, DonGiaNhap,DonGiaBan)
+    VALUES (@MaLoaiHang, @TenHang, @SoLuong, @DonGiaNhap,@DonGiaBan);
+END;
+
+--Sửa
+CREATE PROCEDURE SuaSanPham
+     @MaHang CHAR(10),
+    @MaLoaiHang CHAR(10),
+    @TenHang NVARCHAR(250),
+    @SoLuong INT,
+    @DonGiaNhap INT,
+	@DonGiaBan INT
+AS
+BEGIN
+    UPDATE tbl_HangHoa
+    SET Tenhang = @TenHang, MaLoaiHang=@MaLoaiHang, SoLuong = @SoLuong, DonGiaBan = @DonGiaBan,DonGiaNhap =@DonGiaNhap
+    WHERE MaHang = @MaHang;
+END;
+
+
+--Xóa
+CREATE PROCEDURE XoaSanPham
+    @MaSanPham CHAR(10)
+AS
+BEGIN
+    DELETE FROM tbl_HangHoa
+    WHERE MaHang = @MaSanPham
+END;
+
+
+
+create procedure HangHoa_getAll
+as
+	begin
+		select * from tbl_HangHoa
+	end;
+go
+CREATE PROCEDURE TimMatHangTheoTenHang
+    @TenHang nvarchar(50)
+AS
+BEGIN
+    SELECT *
+    FROM tbl_HangHoa
+    WHERE TenHang = @TenHang;
+END;
+select * from tbl_HangHoa
+exec TimMatHangTheoTenHang N'IPHONE'

@@ -10,6 +10,8 @@ namespace BLL.Interfaces
     public partial interface IHangHoaBLL
     {
         HangHoaDTO GetDatabyID(string id);
+        HangHoaDTO GetTHH(string ten);
+        List<HangHoaDTO> GetallHH();
         bool Create(HangHoaDTO model);
         bool Update(HangHoaDTO model);
         bool Delete(int id);
